@@ -1,0 +1,463 @@
+:root {
+    --primary-color: #d4145a;
+    --secondary-color: #ffc300;
+    --dark-color: #2c3e50;
+    --light-color: #ecf0f1;
+    --success-color: #27ae60;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+/* Login Page */
+.card {
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    animation: slideIn 0.5s ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card-header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.card-header h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.card-header p {
+    font-size: 16px;
+    opacity: 0.95;
+}
+
+.card-body {
+    padding: 40px;
+}
+
+/* Form */
+.form-container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.form-container h2 {
+    color: var(--dark-color);
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--dark-color);
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: var(--border-radius);
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(212, 20, 90, 0.2);
+}
+
+.toggle-text {
+    text-align: center;
+    margin-top: 20px;
+    color: #666;
+    font-size: 14px;
+}
+
+.toggle-text a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.toggle-text a:hover {
+    text-decoration: underline;
+}
+
+/* Buttons */
+.btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(212, 20, 90, 0.3);
+}
+
+.btn-logout {
+    background: var(--primary-color);
+    color: white;
+    padding: 8px 16px;
+    font-size: 13px;
+}
+
+.btn-logout:hover {
+    background: #b01049;
+}
+
+/* Navbar */
+.navbar {
+    background: white;
+    box-shadow: var(--box-shadow);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    margin-bottom: 30px;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 70px;
+}
+
+.nav-brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-menu a {
+    color: var(--dark-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.nav-menu a:hover {
+    color: var(--primary-color);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    padding: 60px 40px;
+    border-radius: var(--border-radius);
+    text-align: center;
+    margin-bottom: 40px;
+    box-shadow: var(--box-shadow);
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.hero .motivasi {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.hero .subtitle {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+/* Content Grid */
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.card-menu {
+    background: white;
+    border-radius: var(--border-radius);
+    padding: 30px;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.card-menu:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card-menu .icon {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.card-menu h3 {
+    color: var(--dark-color);
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.card-menu p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Content Box */
+.content-box {
+    background: white;
+    border-radius: var(--border-radius);
+    padding: 40px;
+    box-shadow: var(--box-shadow);
+    margin-bottom: 30px;
+}
+
+.content-box h1 {
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    font-size: 32px;
+    text-align: center;
+}
+
+.content-box h3 {
+    color: var(--dark-color);
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.content-box p {
+    color: #444;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* Biodata */
+.biodata-card {
+    background: #f9f9f9;
+    border-left: 4px solid var(--primary-color);
+    border-radius: var(--border-radius);
+    padding: 30px;
+}
+
+.biodata-item {
+    display: flex;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.biodata-item:last-child {
+    border-bottom: none;
+}
+
+.biodata-item .label {
+    font-weight: 600;
+    color: var(--primary-color);
+    min-width: 200px;
+}
+
+.biodata-item .value {
+    color: #444;
+    flex: 1;
+}
+
+/* Sejarah */
+.sejarah-content {
+    color: #444;
+}
+
+.sejarah-content p {
+    margin-bottom: 15px;
+    text-align: justify;
+    line-height: 1.8;
+}
+
+.sejarah-content h3 {
+    color: var(--dark-color);
+    margin-top: 25px;
+    margin-bottom: 12px;
+    font-size: 18px;
+}
+
+/* Resensi */
+.resensi-card {
+    background: #f9f9f9;
+    border-radius: var(--border-radius);
+    padding: 25px;
+    margin-bottom: 20px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.resensi-card h2 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.resensi-card p {
+    color: #444;
+    line-height: 1.8;
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+.resensi-info p {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.kelebihan-list,
+.kekurangan-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.kelebihan-list li,
+.kekurangan-list li {
+    padding: 10px 0;
+    color: #444;
+    border-bottom: 1px solid #e0e0e0;
+    line-height: 1.6;
+}
+
+.kelebihan-list li:last-child,
+.kekurangan-list li:last-child {
+    border-bottom: none;
+}
+
+.resensi-kesimpulan {
+    background: linear-gradient(135deg, rgba(212, 20, 90, 0.05) 0%, rgba(255, 195, 0, 0.05) 100%);
+    border-left-color: var(--success-color);
+}
+
+.resensi-kesimpulan h2 {
+    color: var(--success-color);
+}
+
+/* Pages */
+.page {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-menu {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        height: auto;
+        padding: 15px 20px;
+    }
+
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .hero .motivasi {
+        font-size: 16px;
+    }
+
+    .content-box {
+        padding: 20px;
+    }
+
+    .content-box h1 {
+        font-size: 24px;
+    }
+
+    .card-body {
+        padding: 20px;
+    }
+
+    .biodata-item {
+        flex-direction: column;
+    }
+
+    .biodata-item .label {
+        min-width: auto;
+        margin-bottom: 5px;
+    }
+}
