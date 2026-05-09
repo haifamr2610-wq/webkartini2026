@@ -6,7 +6,7 @@
     <title>Hari Kartini - Perayaan Emansipasi Wanita</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body id="loginBody">
     <div class="container" id="loginPage">
         <div class="card">
             <div class="card-header">
@@ -57,163 +57,165 @@
         </div>
     </div>
 
-    <div class="container" id="mainApp" style="display: none;">
-        <nav class="navbar">
-            <div class="nav-container">
-                <div class="nav-brand">🌸 Hari Kartini</div>
-                <ul class="nav-menu">
-                    <li><a href="#" onclick="showPage('home')">Beranda</a></li>
-                    <li><a href="#" onclick="showPage('biodata')">Biodata</a></li>
-                    <li><a href="#" onclick="showPage('sejarah')">Sejarah</a></li>
-                    <li><a href="#" onclick="showPage('buku')">Resensi Buku</a></li>
-                    <li><a href="#" onclick="logout()" class="btn-logout">Logout</a></li>
-                </ul>
-            </div>
-        </nav>
-
-        <!-- Halaman Beranda -->
-        <div class="page" id="home">
-            <div class="hero">
-                <h1>Selamat Datang di Perayaan Hari Kartini</h1>
-                <p class="motivasi">"Mendidik seorang perempuan berarti mendidik sebuah bangsa"</p>
-                <p class="subtitle">21 April - Hari Kebangkitan Emansipasi Wanita Indonesia</p>
-            </div>
-
-            <div class="content-grid">
-                <div class="card-menu" onclick="showPage('biodata')">
-                    <div class="icon">👤</div>
-                    <h3>Biodata Kartini</h3>
-                    <p>Pelajari tentang profil dan latar belakang hidup Raden Ajeng Kartini</p>
-                </div>
-                <div class="card-menu" onclick="showPage('sejarah')">
-                    <div class="icon">📚</div>
-                    <h3>Sejarah Perjuangan</h3>
-                    <p>Kenali perjalanan heroik Kartini memperjuangkan hak perempuan</p>
-                </div>
-                <div class="card-menu" onclick="showPage('buku')">
-                    <div class="icon">📖</div>
-                    <h3>Resensi Buku</h3>
-                    <p>Baca resensi "Habis Gelap Terbitlah Terang" karya Kartini</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Halaman Biodata -->
-        <div class="page" id="biodata" style="display: none;">
-            <div class="content-box">
-                <h1>Biodata Raden Ajeng Kartini</h1>
-                <div class="biodata-card">
-                    <div class="biodata-item">
-                        <span class="label">Nama Lengkap:</span>
-                        <span class="value">Raden Ajeng Kartini (setelah menikah: Raden Ayu Kartini)</span>
-                    </div>
-                    <div class="biodata-item">
-                        <span class="label">Tempat, Tanggal Lahir:</span>
-                        <span class="value">Jepara, Jawa Tengah, 21 April 1879</span>
-                    </div>
-                    <div class="biodata-item">
-                        <span class="label">Tanggal Wafat:</span>
-                        <span class="value">Rembang, 17 September 1904 (Usia 25 tahun)</span>
-                    </div>
-                    <div class="biodata-item">
-                        <span class="label">Ayah:</span>
-                        <span class="value">Raden Mas Adipati Ario Sosroningrat (Bupati Jepara)</span>
-                    </div>
-                    <div class="biodata-item">
-                        <span class="label">Ibu:</span>
-                        <span class="value">M.A. Ngasirah (putri seorang guru agama)</span>
-                    </div>
-                    <div class="biodata-item">
-                        <span class="label">Saudara:</span>
-                        <span class="value">Anak ke-5 dari 11 bersaudara</span>
-                    </div>
-                    <div class="biodata-item">
-                        <span class="label">Suami:</span>
-                        <span class="value">Raden Adipati Joyodiningrat (Bupati Rembang)</span>
-                    </div>
-                    <div class="biodata-item">
-                        <span class="label">Anak:</span>
-                        <span class="value">Soesalit Djojoadhiningrat</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Halaman Sejarah -->
-        <div class="page" id="sejarah" style="display: none;">
-            <div class="content-box">
-                <h1>Sejarah Perjuangan Kartini</h1>
-                <div class="sejarah-content">
-                    <p>Raden Ajeng Kartini lahir pada 21 April 1879 di Jepara, Jawa Tengah. Ia dikenal sebagai pelopor emansipasi wanita Indonesia karena perjuangannya memperjuangkan hak perempuan, terutama dalam bidang pendidikan dan kebebasan berpikir pada masa penjajahan Belanda.</p>
-
-                    <h3>Latar Belakang Keluarga</h3>
-                    <p>Kartini berasal dari keluarga bangsawan Jawa. Ayahnya bernama Raden Mas Adipati Ario Sosroningrat, seorang bupati Jepara. Karena berasal dari keluarga priyayi, Kartini memiliki kesempatan untuk bersekolah di Europese Lagere School (ELS), sekolah khusus anak-anak Belanda dan bangsawan. Di sekolah itu, ia belajar bahasa Belanda dan mulai mengenal pemikiran modern.</p>
-
-                    <h3>Masa Pingitan</h3>
-                    <p>Namun, saat berusia sekitar 12 tahun, Kartini harus menjalani tradisi pingitan. Ia tidak diperbolehkan keluar rumah hingga tiba waktunya menikah. Masa pingitan inilah yang membuat Kartini banyak merenung tentang kehidupan perempuan pribumi yang saat itu mengalami banyak ketidakadilan. Perempuan dianggap hanya bertugas di rumah, tidak boleh memiliki pendidikan tinggi, dan harus tunduk pada adat.</p>
-
-                    <h3>Perjuangan Melalui Tulisan</h3>
-                    <p>Meskipun dipingit, Kartini tidak berhenti belajar. Ia rajin membaca buku, koran, dan majalah dari Eropa. Kartini juga sering berkirim surat dengan teman-temannya di Belanda. Dalam surat-surat tersebut, ia menuliskan pemikirannya tentang pendidikan, hak perempuan, kemiskinan rakyat, dan pentingnya kebebasan berpikir. Kartini ingin perempuan Indonesia memiliki kesempatan yang sama dengan laki-laki untuk belajar dan menentukan masa depannya sendiri.</p>
-
-                    <h3>Kontribusi Nyata</h3>
-                    <p>Perjuangan Kartini tidak dilakukan dengan perang fisik, melainkan melalui pemikiran dan tulisan. Ia percaya bahwa pendidikan adalah jalan utama untuk memajukan perempuan dan bangsa. Setelah menikah dengan Bupati Rembang, yaitu Raden Adipati Joyodiningrat, suaminya mendukung cita-cita Kartini. Kartini kemudian mendirikan sekolah untuk perempuan di Rembang. Di sekolah itu, perempuan diajarkan membaca, menulis, keterampilan, dan pengetahuan dasar agar menjadi lebih mandiri.</p>
-
-                    <h3>Warisan Kartini</h3>
-                    <p>Sayangnya, perjuangan Kartini tidak berlangsung lama. Ia meninggal dunia pada 17 September 1904 dalam usia 25 tahun, beberapa hari setelah melahirkan anak pertamanya. Walaupun hidupnya singkat, pemikiran Kartini memberikan pengaruh besar bagi perkembangan pendidikan dan hak perempuan di Indonesia.</p>
-
-                    <p>Setelah Kartini meninggal, surat-suratnya dikumpulkan oleh J. H. Abendanon dan diterbitkan menjadi buku berjudul Habis Gelap Terbitlah Terang. Buku tersebut membuat pemikiran Kartini dikenal luas hingga ke berbagai negara.</p>
-
-                    <p>Atas jasa-jasanya, pemerintah Indonesia menetapkan Kartini sebagai pahlawan nasional. Hari kelahirannya, yaitu 21 April, diperingati sebagai Hari Kartini. Perjuangan Kartini menjadi simbol semangat perempuan Indonesia untuk memperoleh pendidikan, kebebasan, dan kesetaraan hak dalam kehidupan masyarakat.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Halaman Resensi Buku -->
-        <div class="page" id="buku" style="display: none;">
-            <div class="content-box">
-                <h1>Resensi Buku "Habis Gelap Terbitlah Terang"</h1>
-
-                <div class="resensi-card">
-                    <h2>Identitas Buku</h2>
-                    <div class="resensi-info">
-                        <p><strong>Judul Buku:</strong> Habis Gelap Terbitlah Terang</p>
-                        <p><strong>Penulis:</strong> Raden Ajeng Kartini</p>
-                        <p><strong>Penerbit:</strong> Balai Pustaka</p>
-                        <p><strong>Genre:</strong> Biografi / Kumpulan Surat</p>
-                        <p><strong>Bahasa Asli:</strong> Belanda (Door Duisternis tot Licht)</p>
-                    </div>
-                </div>
-
-                <div class="resensi-card">
-                    <h2>Sinopsis</h2>
-                    <p>Buku Habis Gelap Terbitlah Terang merupakan kumpulan surat-surat Kartini yang ditulis kepada sahabat-sahabatnya di Belanda. Dalam surat tersebut, Kartini menceritakan kehidupan perempuan pribumi pada masa penjajahan Belanda yang masih terikat adat dan memiliki keterbatasan dalam memperoleh pendidikan.</p>
-
-                    <p>Kartini mengungkapkan keinginannya agar perempuan Indonesia dapat memiliki hak yang sama seperti laki-laki, terutama dalam bidang pendidikan. Ia percaya bahwa pendidikan dapat mengubah kehidupan perempuan menjadi lebih baik. Selain membahas emansipasi wanita, buku ini juga memuat pemikiran Kartini tentang budaya, kemiskinan, dan kebebasan berpikir.</p>
-
-                    <p>Melalui tulisan-tulisannya, Kartini menunjukkan semangat perjuangan, kecerdasan, serta kepeduliannya terhadap masa depan perempuan Indonesia.</p>
-                </div>
-
-                <div class="resensi-card">
-                    <h2>Kelebihan Buku</h2>
-                    <ul class="kelebihan-list">
-                        <li>✓ Bahasa yang digunakan penuh makna dan inspiratif</li>
-                        <li>✓ Memberikan banyak pelajaran tentang perjuangan perempuan</li>
-                        <li>✓ Membuka wawasan pembaca mengenai kehidupan masyarakat pada masa penjajahan</li>
-                        <li>✓ Isi buku mampu memotivasi pembaca untuk menghargai pendidikan dan kebebasan berpikir</li>
+    <div id="mainBody" style="display: none;">
+        <div class="container" id="mainApp">
+            <nav class="navbar">
+                <div class="nav-container">
+                    <div class="nav-brand">🌸 Hari Kartini</div>
+                    <ul class="nav-menu">
+                        <li><a href="#" onclick="showPage('home')">Beranda</a></li>
+                        <li><a href="#" onclick="showPage('biodata')">Biodata</a></li>
+                        <li><a href="#" onclick="showPage('sejarah')">Sejarah</a></li>
+                        <li><a href="#" onclick="showPage('buku')">Resensi Buku</a></li>
+                        <li><a href="#" onclick="logout()" class="btn-logout">Logout</a></li>
                     </ul>
                 </div>
+            </nav>
 
-                <div class="resensi-card">
-                    <h2>Kekurangan Buku</h2>
-                    <ul class="kekurangan-list">
-                        <li>⚠ Beberapa bagian menggunakan bahasa yang cukup sulit dipahami karena berasal dari surat lama</li>
-                        <li>⚠ Alur buku tidak seperti novel karena berbentuk kumpulan surat</li>
-                    </ul>
+            <!-- Halaman Beranda -->
+            <div class="page" id="home">
+                <div class="hero">
+                    <h1>Selamat Datang di Perayaan Hari Kartini</h1>
+                    <p class="motivasi">"Mendidik seorang perempuan berarti mendidik sebuah bangsa"</p>
+                    <p class="subtitle">21 April - Hari Kebangkitan Emansipasi Wanita Indonesia</p>
                 </div>
 
-                <div class="resensi-card resensi-kesimpulan">
-                    <h2>Kesimpulan</h2>
-                    <p>Buku Habis Gelap Terbitlah Terang sangat layak dibaca, terutama oleh pelajar dan generasi muda. Buku ini mengajarkan pentingnya pendidikan, kesetaraan hak, dan semangat memperjuangkan cita-cita. Perjuangan Kartini membuktikan bahwa perempuan juga memiliki hak untuk maju dan berkembang.</p>
+                <div class="content-grid">
+                    <div class="card-menu" onclick="showPage('biodata')">
+                        <div class="icon">👤</div>
+                        <h3>Biodata Kartini</h3>
+                        <p>Pelajari tentang profil dan latar belakang hidup Raden Ajeng Kartini</p>
+                    </div>
+                    <div class="card-menu" onclick="showPage('sejarah')">
+                        <div class="icon">📚</div>
+                        <h3>Sejarah Perjuangan</h3>
+                        <p>Kenali perjalanan heroik Kartini memperjuangkan hak perempuan</p>
+                    </div>
+                    <div class="card-menu" onclick="showPage('buku')">
+                        <div class="icon">📖</div>
+                        <h3>Resensi Buku</h3>
+                        <p>Baca resensi "Habis Gelap Terbitlah Terang" karya Kartini</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Halaman Biodata -->
+            <div class="page" id="biodata" style="display: none;">
+                <div class="content-box">
+                    <h1>Biodata Raden Ajeng Kartini</h1>
+                    <div class="biodata-card">
+                        <div class="biodata-item">
+                            <span class="label">Nama Lengkap:</span>
+                            <span class="value">Raden Ajeng Kartini (setelah menikah: Raden Ayu Kartini)</span>
+                        </div>
+                        <div class="biodata-item">
+                            <span class="label">Tempat, Tanggal Lahir:</span>
+                            <span class="value">Jepara, Jawa Tengah, 21 April 1879</span>
+                        </div>
+                        <div class="biodata-item">
+                            <span class="label">Tanggal Wafat:</span>
+                            <span class="value">Rembang, 17 September 1904 (Usia 25 tahun)</span>
+                        </div>
+                        <div class="biodata-item">
+                            <span class="label">Ayah:</span>
+                            <span class="value">Raden Mas Adipati Ario Sosroningrat (Bupati Jepara)</span>
+                        </div>
+                        <div class="biodata-item">
+                            <span class="label">Ibu:</span>
+                            <span class="value">M.A. Ngasirah (putri seorang guru agama)</span>
+                        </div>
+                        <div class="biodata-item">
+                            <span class="label">Saudara:</span>
+                            <span class="value">Anak ke-5 dari 11 bersaudara</span>
+                        </div>
+                        <div class="biodata-item">
+                            <span class="label">Suami:</span>
+                            <span class="value">Raden Adipati Joyodiningrat (Bupati Rembang)</span>
+                        </div>
+                        <div class="biodata-item">
+                            <span class="label">Anak:</span>
+                            <span class="value">Soesalit Djojoadhiningrat</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Halaman Sejarah -->
+            <div class="page" id="sejarah" style="display: none;">
+                <div class="content-box">
+                    <h1>Sejarah Perjuangan Kartini</h1>
+                    <div class="sejarah-content">
+                        <p>Raden Ajeng Kartini lahir pada 21 April 1879 di Jepara, Jawa Tengah. Ia dikenal sebagai pelopor emansipasi wanita Indonesia karena perjuangannya memperjuangkan hak perempuan, terutama dalam bidang pendidikan dan kebebasan berpikir pada masa penjajahan Belanda.</p>
+
+                        <h3>Latar Belakang Keluarga</h3>
+                        <p>Kartini berasal dari keluarga bangsawan Jawa. Ayahnya bernama Raden Mas Adipati Ario Sosroningrat, seorang bupati Jepara. Karena berasal dari keluarga priyayi, Kartini memiliki kesempatan untuk bersekolah di Europese Lagere School (ELS), sekolah khusus anak-anak Belanda dan bangsawan. Di sekolah itu, ia belajar bahasa Belanda dan mulai mengenal pemikiran modern.</p>
+
+                        <h3>Masa Pingitan</h3>
+                        <p>Namun, saat berusia sekitar 12 tahun, Kartini harus menjalani tradisi pingitan. Ia tidak diperbolehkan keluar rumah hingga tiba waktunya menikah. Masa pingitan inilah yang membuat Kartini banyak merenung tentang kehidupan perempuan pribumi yang saat itu mengalami banyak ketidakadilan. Perempuan dianggap hanya bertugas di rumah, tidak boleh memiliki pendidikan tinggi, dan harus tunduk pada adat.</p>
+
+                        <h3>Perjuangan Melalui Tulisan</h3>
+                        <p>Meskipun dipingit, Kartini tidak berhenti belajar. Ia rajin membaca buku, koran, dan majalah dari Eropa. Kartini juga sering berkirim surat dengan teman-temannya di Belanda. Dalam surat-surat tersebut, ia menuliskan pemikirannya tentang pendidikan, hak perempuan, kemiskinan rakyat, dan pentingnya kebebasan berpikir. Kartini ingin perempuan Indonesia memiliki kesempatan yang sama dengan laki-laki untuk belajar dan menentukan masa depannya sendiri.</p>
+
+                        <h3>Kontribusi Nyata</h3>
+                        <p>Perjuangan Kartini tidak dilakukan dengan perang fisik, melainkan melalui pemikiran dan tulisan. Ia percaya bahwa pendidikan adalah jalan utama untuk memajukan perempuan dan bangsa. Setelah menikah dengan Bupati Rembang, yaitu Raden Adipati Joyodiningrat, suaminya mendukung cita-cita Kartini. Kartini kemudian mendirikan sekolah untuk perempuan di Rembang. Di sekolah itu, perempuan diajarkan membaca, menulis, keterampilan, dan pengetahuan dasar agar menjadi lebih mandiri.</p>
+
+                        <h3>Warisan Kartini</h3>
+                        <p>Sayangnya, perjuangan Kartini tidak berlangsung lama. Ia meninggal dunia pada 17 September 1904 dalam usia 25 tahun, beberapa hari setelah melahirkan anak pertamanya. Walaupun hidupnya singkat, pemikiran Kartini memberikan pengaruh besar bagi perkembangan pendidikan dan hak perempuan di Indonesia.</p>
+
+                        <p>Setelah Kartini meninggal, surat-suratnya dikumpulkan oleh J. H. Abendanon dan diterbitkan menjadi buku berjudul Habis Gelap Terbitlah Terang. Buku tersebut membuat pemikiran Kartini dikenal luas hingga ke berbagai negara.</p>
+
+                        <p>Atas jasa-jasanya, pemerintah Indonesia menetapkan Kartini sebagai pahlawan nasional. Hari kelahirannya, yaitu 21 April, diperingati sebagai Hari Kartini. Perjuangan Kartini menjadi simbol semangat perempuan Indonesia untuk memperoleh pendidikan, kebebasan, dan kesetaraan hak dalam kehidupan masyarakat.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Halaman Resensi Buku -->
+            <div class="page" id="buku" style="display: none;">
+                <div class="content-box">
+                    <h1>Resensi Buku "Habis Gelap Terbitlah Terang"</h1>
+
+                    <div class="resensi-card">
+                        <h2>Identitas Buku</h2>
+                        <div class="resensi-info">
+                            <p><strong>Judul Buku:</strong> Habis Gelap Terbitlah Terang</p>
+                            <p><strong>Penulis:</strong> Raden Ajeng Kartini</p>
+                            <p><strong>Penerbit:</strong> Balai Pustaka</p>
+                            <p><strong>Genre:</strong> Biografi / Kumpulan Surat</p>
+                            <p><strong>Bahasa Asli:</strong> Belanda (Door Duisternis tot Licht)</p>
+                        </div>
+                    </div>
+
+                    <div class="resensi-card">
+                        <h2>Sinopsis</h2>
+                        <p>Buku Habis Gelap Terbitlah Terang merupakan kumpulan surat-surat Kartini yang ditulis kepada sahabat-sahabatnya di Belanda. Dalam surat tersebut, Kartini menceritakan kehidupan perempuan pribumi pada masa penjajahan Belanda yang masih terikat adat dan memiliki keterbatasan dalam memperoleh pendidikan.</p>
+
+                        <p>Kartini mengungkapkan keinginannya agar perempuan Indonesia dapat memiliki hak yang sama seperti laki-laki, terutama dalam bidang pendidikan. Ia percaya bahwa pendidikan dapat mengubah kehidupan perempuan menjadi lebih baik. Selain membahas emansipasi wanita, buku ini juga memuat pemikiran Kartini tentang budaya, kemiskinan, dan kebebasan berpikir.</p>
+
+                        <p>Melalui tulisan-tulisannya, Kartini menunjukkan semangat perjuangan, kecerdasan, serta kepeduliannya terhadap masa depan perempuan Indonesia.</p>
+                    </div>
+
+                    <div class="resensi-card">
+                        <h2>Kelebihan Buku</h2>
+                        <ul class="kelebihan-list">
+                            <li>✓ Bahasa yang digunakan penuh makna dan inspiratif</li>
+                            <li>✓ Memberikan banyak pelajaran tentang perjuangan perempuan</li>
+                            <li>✓ Membuka wawasan pembaca mengenai kehidupan masyarakat pada masa penjajahan</li>
+                            <li>✓ Isi buku mampu memotivasi pembaca untuk menghargai pendidikan dan kebebasan berpikir</li>
+                        </ul>
+                    </div>
+
+                    <div class="resensi-card">
+                        <h2>Kekurangan Buku</h2>
+                        <ul class="kekurangan-list">
+                            <li>⚠ Beberapa bagian menggunakan bahasa yang cukup sulit dipahami karena berasal dari surat lama</li>
+                            <li>⚠ Alur buku tidak seperti novel karena berbentuk kumpulan surat</li>
+                        </ul>
+                    </div>
+
+                    <div class="resensi-card resensi-kesimpulan">
+                        <h2>Kesimpulan</h2>
+                        <p>Buku Habis Gelap Terbitlah Terang sangat layak dibaca, terutama oleh pelajar dan generasi muda. Buku ini mengajarkan pentingnya pendidikan, kesetaraan hak, dan semangat memperjuangkan cita-cita. Perjuangan Kartini membuktikan bahwa perempuan juga memiliki hak untuk maju dan berkembang.</p>
+                    </div>
                 </div>
             </div>
         </div>

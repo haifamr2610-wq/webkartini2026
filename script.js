@@ -44,7 +44,7 @@ document.getElementById('registerForm').addEventListener('submit', function(e) {
     
     // Validasi
     if (password !== confirmPassword) {
-        alert('Password dan konfirmasi password tidak sesuai!');
+        alert('Kata sandi dan konfirmasi kata sandi tidak sesuai!');
         return;
     }
     
@@ -66,8 +66,8 @@ document.getElementById('registerForm').addEventListener('submit', function(e) {
 
 // Tampilkan main app
 function showMainApp() {
-    document.getElementById('loginPage').style.display = 'none';
-    document.getElementById('mainApp').style.display = 'block';
+    document.getElementById('loginBody').style.display = 'none';
+    document.getElementById('mainBody').style.display = 'block';
     showPage('home');
 }
 
@@ -90,8 +90,8 @@ function showPage(pageName) {
 function logout() {
     currentUser = null;
     localStorage.removeItem('currentUser');
-    document.getElementById('mainApp').style.display = 'none';
-    document.getElementById('loginPage').style.display = 'block';
+    document.getElementById('loginBody').style.display = 'flex';
+    document.getElementById('mainBody').style.display = 'none';
     document.getElementById('loginForm').reset();
     document.getElementById('registerForm').reset();
     document.getElementById('registerContainer').style.display = 'none';
